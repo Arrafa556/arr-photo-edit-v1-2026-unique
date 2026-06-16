@@ -1,0 +1,63 @@
+Metadata-Version: 2.4
+Name: arr-photo-tool-2026
+Version: 0.1.0
+Summary: Deskripsi projek saya
+Home-page: https://github.com/username/my-project
+Author: Nama Anda
+Author-email: email@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.13
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-python
+Dynamic: summary
+
+\# My Awesome Package
+
+
+
+Create a project with setup, Repository for everything
+
+
+
+\## Installation
+
+
+
+```bash
+
+pip install my-awesome-package
+
+```
+
+
+
+\## Usage
+
+
+
+```python
+
+from my\_package.main import hello
+
+print(hello())
+
+```
+
+
+
+\## License
+
+
+
+MIT License
+
