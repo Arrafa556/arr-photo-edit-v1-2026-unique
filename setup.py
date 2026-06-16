@@ -8,7 +8,7 @@ setup(
     description="Deskripsi projek saya",
     long_description=open("README.md").read(),
     long_description_content_type="text/markdown",
-    url="https://github.com/username/my-project",
+    url="https://github.com/Arrafa556/arr-photo-edit-v1-2026-unique",
     packages=find_packages(),
     classifiers=[
         "Programming Language :: Python :: 3",
