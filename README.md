@@ -49,3 +49,14 @@ furnished to do so, subject to the following conditions:
 
 The above copyright notice and this permission notice shall be included in all
 copies or substantial portions of the Software.
+
+## 💭 Inspirational Quote
+
+<p align="center">
+  <em>"The only way to do great work is to love what you do."</em><br>
+  – Steve Jobs
+</p>
+
+<p align="center">
+  Made with ❤️ by Arrafa Sr
+</p>
