@@ -1,4 +1,4 @@
-\# My Awesome Package (Arraf556)
+\# My Awesome Package (Arraf556)  (  Web Dev / strukur data)
 
 
 
@@ -31,10 +31,11 @@ print(hello())
 ```
 💻 Tumpukan Teknologi
 
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" width="40" height="40" alt="Python" title="Python"/>
+
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" width="40" height="40" alt="Python" title="Python"/>
    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" width="40" height="40" alt="PHP" title="PHP"/>
 
-
+# Programming focuses on web or data structures # 
 
 
 
