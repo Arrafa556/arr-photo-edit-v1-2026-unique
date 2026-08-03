@@ -43,7 +43,7 @@ print(hello())
 
 <p align="center">
 
- <img src="https://github-readme-stats-nu-gray.vercel.app/api?username=Arrafa556&show_icons=true&theme=github_dark" alt="GitHub Stats"/>
+ <img src="https://github-readme-stats-nu-gray.vercel.app/api?username=Arrafarepo&show_icons=true&theme=github_dark" alt="GitHub Stats"/>
   <br>
 </p>
 
