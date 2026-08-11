@@ -6,8 +6,8 @@
 
 
 
-Create a project with setup, Repository for everything
-#This repository contains the program output and is accessible and open for viewing
+Create a project with setup, Repository for everything  This repository contains the program output and is accessible and open for viewing
+
 
 
 
