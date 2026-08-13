@@ -18,6 +18,9 @@ Create a project with setup, Repository for everything  This repository contains
 ```bash
 
 pip install my-awesome-package
+winget install Python.Python.3.13
+winget search php
+winget install PHP.PHP.8.3
 
 ```
 
