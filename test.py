@@ -3,18 +3,18 @@ pygame.init()
 
 screen = pygame.display.set_mode((500, 400))
 
-potato_img = pygame.image.load("Potato.jpg.jpg").convert()
+potato_img = pygame.image.load("Potato 3nd .jpg").convert()
 potato_img = pygame.transform.scale(potato_img, (50, 50)) #resize the image to 50x50 pixels
 potato_img.set_colorkey((200, 100, 100))  # Assuming white is the transparent color
 
 
 # Gambar Kedua
-gambar2 = pygame.image.load("Burung.jpg").convert()
+gambar2 = pygame.image.load("Burung 3nd.jpg").convert()
 gambar2 = pygame.transform.scale(gambar2, (50, 50)) #resize the image to 50x50 pixels
 
 
 # gambar Rumput
-rumput_img = pygame.image.load("rumput.jpeg").convert()
+rumput_img = pygame.image.load("rumput 2nd.jpeg").convert()
 rumput_img = pygame.transform.scale(rumput_img, (500, 150)) #resize the image to 500x150 pixels
 rumput_img.set_colorkey((225, 255, 255)) # Assuming white is the transparent color
 
