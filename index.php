@@ -1,35 +1,48 @@
-<?php
-     //  simpan file variable ini dengan contoh variable.php
+<!DOCTYPE html>
 
-     /** Menyimpan nama arrafa dalam varible $nama
-      * karana type datanya adalah staring (teks)
-    * maka penulisanya denagn tanda kutip"  
-    
-     **/  
-     
-   $name = "Arrafa,";
-   echo $name;
-   echo "<br>"; // Buat baris baru 
+<head>
+    <html>
+        <title>Informaisi Kariawan</title>
+    <h1>Berikut Adalah Informasi Detai Kariawan</h1>
+    <h2>PT Adibulong Centra Kinvci</h2>
+    <p>INI ADALAH TABLE INFORMASI KARIAWAN</p>
+    </html>
+</head>
+           </body>
+        <head>
+            <style>
+               body {background-color: #f0f0f0;}
+               h1 {color: navy;}
+               p {text-align: center;}
+               h2 {text-align: center;}
+               h1 {text-align: center;}
+                
 
-    // simpan umur arrafa dalam variable $umur 
+               </style>
+        </head>
 
-   $umur = "16,";
-   echo $umur;
-   echo "<br>"; // Buat dalam variable umur 
+    <hr>
+    <?php
+    $nama = "Arrafa";
+    $umur = "16 Tahun";
+    $divisi =  "Pemogram";
+    $email = "arrafabnb@gmail.com";
+    $jabatan = "Junior";
 
-   // simpan tanggal lahir arrafa dalam variable
-   
-   $tanggalahir = strtotime("19 November 2010");
-   echo date("j M Y", $tanggalahir);
-   echo "<br>"; // Buat baris baru
+    $foto = "foto.jpg";
 
-   // simpan jawaban benar (true) atau salah (false)
-   $Mentalpejuang = true;
-   echo"MentalPejuang,";
-   $mentalpemberani = false;
-   echo"mentalpemberani";
-   
 
-   
-  
-?>
+    ?>
+    <table border="1" width="100%">
+        <tr>
+            <td>
+                <b>Nama:</b> <?php echo $nama; ?>
+                <br>
+                <b>umur:</b> <?php echo $umur; ?>
+                <br>
+                <b>divisi:</b> <?php echo $divisi; ?>
+                <br>
+                <b>email:</b> <?php echo $email; ?>
+        </tr>
+    </table>
+    <br>
