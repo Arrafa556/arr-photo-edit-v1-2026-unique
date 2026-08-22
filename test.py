@@ -1,84 +1,74 @@
 import pygame 
+import math
 pygame.init()
 
 screen = pygame.display.set_mode((500, 400))
+pygame.display.set_caption("Loading screen")
 
-potato_img = pygame.image.load("Potato 3nd .jpg").convert()
-potato_img = pygame.transform.scale(potato_img, (50, 50)) #resize the image to 50x50 pixels
-potato_img.set_colorkey((200, 100, 100))  # Assuming white is the transparent color
+burung = pygame.image.load("Burung3nd.jpg").convert()
+burung = pygame.transform.scale(burung, (50, 50))
+burung.set_colorkey((200, 100, 100))
 
+gambar2 = pygame.image.load("Manukbng.jpg").convert()
+gambar2 = pygame.transform.scale(gambar2, (50, 50))
 
-# Gambar Kedua
-gambar2 = pygame.image.load("Burung 3nd.jpg").convert()
-gambar2 = pygame.transform.scale(gambar2, (50, 50)) #resize the image to 50x50 pixels
+rumput_img = pygame.image.load("rumput 2nd.jpg").convert()
+rumput_img = pygame.transform.scale(rumput_img, (500, 150))
+rumput_img.set_colorkey((225, 255, 255))
 
-
-# gambar Rumput
-rumput_img = pygame.image.load("rumput 2nd.jpeg").convert()
-rumput_img = pygame.transform.scale(rumput_img, (500, 150)) #resize the image to 500x150 pixels
-rumput_img.set_colorkey((225, 255, 255)) # Assuming white is the transparent color
-
-
-running =  True
-x = 0  # Posisi Gambar 1 
-x2 = 500  # Posisi Gambar 2 
+running = True
+x = 0
+x2 = 500
 clock = pygame.time.Clock()
 delta_time = 0.1
 timer = 0
 dot_count = 0
-font = pygame.font.Font(None, 36)  # Create a font object
-
-jarak = 60 # atur jarak antar gambar 
-
+font = pygame.font.Font(None, 22)
+jarak = 60
+waktu_berjalan = 0
 
 while running:
-    screen.fill((135, 206, 235)) # Latar Belakang Biru langit
+    screen.fill((135, 206, 235))
 
+    pusat_x, pusat_y = 430, 45
+    jari_dalam = 42
+    jari_luar = 60
+    for sudut in range(0, 360, 30):
+        rad = math.radians(sudut)
+        x1 = pusat_x + jari_dalam * math.cos(rad)
+        y1 = pusat_y + jari_dalam * math.sin(rad)
+        x2_sinar = pusat_x + jari_luar * math.cos(rad)
+        y2_sinar = pusat_y + jari_luar * math.sin(rad)
+        pygame.draw.line(screen, (255, 223, 0), (x1, y1), (x2_sinar, y2_sinar), 3)
 
-    pygame.draw.circle(screen, (255, 223, 0), (430, 45), 40)  # Draw a yellow circle for the sun at position (430, 20) radius 40
+    pygame.draw.circle(screen, (255, 223, 0), (pusat_x, pusat_y), 40)
 
-    screen.blit(rumput_img, (0, 250)) # gambar Rumput di bawah))
-    screen.blit(potato_img, (x, 30)) # gambar Pertama
-    screen.blit(gambar2, (x2, 30 + jarak)) # gambar Kedua , nempel di sebelah kanan gambar 
-    
-
+    screen.blit(rumput_img, (0, 250))
+    screen.blit(burung, (x, 30))
+    screen.blit(gambar2, (x2, 30 + jarak))
 
     timer += clock.get_time()
-    if timer > 400: # ganti Tiap 400ms 
-        dot_count = (dot_count + 1) % 4 
+    if timer > 400:
+        dot_count = (dot_count + 1) % 4
         timer = 0
 
+    teks = "loading Screen" + "." * dot_count
+    render = font.render(teks, True, (255, 255, 255))
+    screen.blit(render, (10, 10))
 
-    teks = "loading" + "." * dot_count
-    render = font.render(teks, True, (255, 255, 255)) #white color
-    screen.blit(render, (10, 10))  # Draw the text at position (10, 10)
+    x += 300 * delta_time
+    x2 -= 300 * delta_time
 
-   
-    x += 300  * delta_time  # Move the potato to the right
-    x2 -= 300 * delta_time  # Move the second image to the left
-    pygame.display.flip()
-    delta_time = clock.tick(30) / 1000.0  # Get the time passed since the last frame
-   
-
-
-
-    if x > 500: 
-        x = -150  # Ulangi gambar Dan Muncul Kembali di Layar awal screen 
-       
+    if x > 500:
+        x = -150
     if x2 < -150:
-        x2 = 500  # Ulangi gambar Dan Muncul Kembali di Layar awal screen
+        x2 = 500
 
-
-   
-    clock.tick(30)  # limit the frame FPS
-
+    pygame.display.flip()
+    delta_time = clock.tick(30) / 1000.0
 
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
-          running = False
-    
-    
-
+            running = False
 
 pygame.quit()
-
